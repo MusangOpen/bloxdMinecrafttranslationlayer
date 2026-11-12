@@ -1,0 +1,34 @@
+{
+  "name": "bloxd-translation-layer",
+  "version": "2.0.0",
+  "description": "A middle man to translate Bloxd packets into Minecraft 1.21.11 packets.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test/transport.js && node test/e2e-mc.js && node test/e2e-packets.js && node test/handlers-smoke.js",
+    "test:codec": "node test/codec.js",
+    "test:e2e": "node test/e2e-mc.js",
+    "test:required": "node test/required-suite.js",
+    "test:required:selftest": "node test/required-suite.js --self-test"
+  },
+  "author": "7GrandDad",
+  "license": "AGPL-3.0-or-later",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "avsc": "^5.7.7",
+    "colyseus.js": "0.16.22",
+    "minecraft-data": "3.117.0",
+    "minecraft-protocol": "1.68.0",
+    "ndarray": "^1.0.19",
+    "pako": "^2.1.0",
+    "prismarine-chunk": "1.41.0",
+    "prismarine-nbt": "2.8.0",
+    "vec3": "^0.1.10",
+    "ws": "^8.18.1"
+  },
+  "overrides": {
+    "@colyseus/schema": "5.0.45"
+  }
+}

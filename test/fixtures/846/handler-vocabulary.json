@@ -1,0 +1,640 @@
+{
+  "schemaVersion": 1,
+  "source": "Frozen static scan of bloxd/handlers/impl/*.js client.write/client.on call sites for task 16, updated after pre-join entity guards.",
+  "handlerWriteCount": 90,
+  "handlerReadCount": 15,
+  "writes": [
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 46,
+      "legacyName": "player_info",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 60,
+      "legacyName": "named_entity_spawn",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 71,
+      "legacyName": "entity_head_rotation",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 77,
+      "legacyName": "entity_equipment",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 84,
+      "legacyName": "spawn_entity_living",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 84,
+      "legacyName": "spawn_entity",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 97,
+      "legacyName": "entity_metadata",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 105,
+      "legacyName": "player_info",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 117,
+      "legacyName": "entity_destroy",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 192,
+      "legacyName": "animation",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 259,
+      "legacyName": "entity_metadata",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 275,
+      "legacyName": "entity_metadata",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 285,
+      "legacyName": "entity_equipment",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 297,
+      "legacyName": "animation",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 340,
+      "legacyName": "entity_teleport",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 351,
+      "legacyName": "entity_velocity",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 360,
+      "legacyName": "entity_head_rotation",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 376,
+      "legacyName": "entity_destroy",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 417,
+      "legacyName": "entity_teleport",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 427,
+      "legacyName": "entity_velocity",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 443,
+      "legacyName": "collect",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 451,
+      "legacyName": "entity_destroy",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 512,
+      "legacyName": "update_health",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 526,
+      "legacyName": "entity_status",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 532,
+      "legacyName": "entity_metadata",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 545,
+      "legacyName": "animation",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 552,
+      "legacyName": "animation",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 558,
+      "legacyName": "entity_metadata",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 568,
+      "legacyName": "entity_velocity",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 575,
+      "legacyName": "entity_velocity",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 593,
+      "legacyName": "entity_equipment",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 611,
+      "legacyName": "remove_entity_effect",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 617,
+      "legacyName": "entity_effect",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 634,
+      "legacyName": "remove_entity_effect",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 673,
+      "legacyName": "entity_metadata",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 679,
+      "legacyName": "position",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 710,
+      "legacyName": "position",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 728,
+      "legacyName": "update_health",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 733,
+      "legacyName": "entity_metadata",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 740,
+      "legacyName": "experience",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 917,
+      "legacyName": "respawn",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 939,
+      "legacyName": "custom_payload",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/gui.js",
+      "line": 46,
+      "legacyName": "set_slot",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/gui.js",
+      "line": 105,
+      "legacyName": "open_window",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/gui.js",
+      "line": 115,
+      "legacyName": "close_window",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/gui.js",
+      "line": 339,
+      "legacyName": "set_slot",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/gui.js",
+      "line": 345,
+      "legacyName": "window_items",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/gui.js",
+      "line": 352,
+      "legacyName": "set_slot",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/gui.js",
+      "line": 366,
+      "legacyName": "set_slot",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/gui.js",
+      "line": 372,
+      "legacyName": "window_items",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/gui.js",
+      "line": 383,
+      "legacyName": "open_window",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/gui.js",
+      "line": 397,
+      "legacyName": "window_items",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/gui.js",
+      "line": 411,
+      "legacyName": "window_items",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/misc.js",
+      "line": 51,
+      "legacyName": "chat",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/misc.js",
+      "line": 64,
+      "legacyName": "chat",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/misc.js",
+      "line": 82,
+      "legacyName": "title",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/misc.js",
+      "line": 90,
+      "legacyName": "title",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/misc.js",
+      "line": 97,
+      "legacyName": "title",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/misc.js",
+      "line": 105,
+      "legacyName": "title",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/misc.js",
+      "line": 143,
+      "legacyName": "chat",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/misc.js",
+      "line": 172,
+      "legacyName": "chat",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/misc.js",
+      "line": 205,
+      "legacyName": "chat",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/misc.js",
+      "line": 216,
+      "legacyName": "chat",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/misc.js",
+      "line": 227,
+      "legacyName": "chat",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/misc.js",
+      "line": 300,
+      "legacyName": "tab_complete",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/misc.js",
+      "line": 320,
+      "legacyName": "tab_complete",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/misc.js",
+      "line": 327,
+      "legacyName": "named_sound_effect",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/misc.js",
+      "line": 339,
+      "legacyName": "chat",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/misc.js",
+      "line": 363,
+      "legacyName": "chat",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/scoreboard.js",
+      "line": 19,
+      "legacyName": "scoreboard_objective",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/scoreboard.js",
+      "line": 28,
+      "legacyName": "scoreboard_objective",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/scoreboard.js",
+      "line": 34,
+      "legacyName": "scoreboard_display_objective",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/scoreboard.js",
+      "line": 63,
+      "legacyName": "scoreboard_score",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/tablist.js",
+      "line": 29,
+      "legacyName": "player_info",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/tablist.js",
+      "line": 40,
+      "legacyName": "scoreboard_team",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/tablist.js",
+      "line": 54,
+      "legacyName": "player_info",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/tablist.js",
+      "line": 67,
+      "legacyName": "scoreboard_team",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/tablist.js",
+      "line": 72,
+      "legacyName": "scoreboard_team",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/tablist.js",
+      "line": 86,
+      "legacyName": "playerlist_header",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/tablist.js",
+      "line": 102,
+      "legacyName": "scoreboard_team",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/tablist.js",
+      "line": 107,
+      "legacyName": "player_info",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/world.js",
+      "line": 105,
+      "legacyName": "map_chunk",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/world.js",
+      "line": 131,
+      "legacyName": "map_chunk",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/world.js",
+      "line": 184,
+      "legacyName": "block_change",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/world.js",
+      "line": 197,
+      "legacyName": "update_sign",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/world.js",
+      "line": 210,
+      "legacyName": "remove_entity_effect",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/world.js",
+      "line": 236,
+      "legacyName": "entity_status",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/world.js",
+      "line": 240,
+      "legacyName": "update_health",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/world.js",
+      "line": 247,
+      "legacyName": "block_break_animation",
+      "kind": "write"
+    },
+    {
+      "file": "bloxd/handlers/impl/world.js",
+      "line": 492,
+      "legacyName": "entity_effect",
+      "kind": "write"
+    }
+  ],
+  "reads": [
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 751,
+      "legacyName": "flying",
+      "kind": "read"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 752,
+      "legacyName": "position",
+      "kind": "read"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 775,
+      "legacyName": "look",
+      "kind": "read"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 780,
+      "legacyName": "position_look",
+      "kind": "read"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 804,
+      "legacyName": "held_item_slot",
+      "kind": "read"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 809,
+      "legacyName": "arm_animation",
+      "kind": "read"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 822,
+      "legacyName": "entity_action",
+      "kind": "read"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 840,
+      "legacyName": "use_entity",
+      "kind": "read"
+    },
+    {
+      "file": "bloxd/handlers/impl/entity.js",
+      "line": 900,
+      "legacyName": "spectate",
+      "kind": "read"
+    },
+    {
+      "file": "bloxd/handlers/impl/gui.js",
+      "line": 132,
+      "legacyName": "window_click",
+      "kind": "read"
+    },
+    {
+      "file": "bloxd/handlers/impl/gui.js",
+      "line": 319,
+      "legacyName": "close_window",
+      "kind": "read"
+    },
+    {
+      "file": "bloxd/handlers/impl/misc.js",
+      "line": 154,
+      "legacyName": "chat",
+      "kind": "read"
+    },
+    {
+      "file": "bloxd/handlers/impl/misc.js",
+      "line": 295,
+      "legacyName": "tab_complete",
+      "kind": "read"
+    },
+    {
+      "file": "bloxd/handlers/impl/world.js",
+      "line": 412,
+      "legacyName": "block_place",
+      "kind": "read"
+    },
+    {
+      "file": "bloxd/handlers/impl/world.js",
+      "line": 481,
+      "legacyName": "block_dig",
+      "kind": "read"
+    }
+  ]
+}

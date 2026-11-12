@@ -1,0 +1,115 @@
+{
+ "schemaVersion": 1,
+ "kind": "vanilla-1.21.11-chunk-wire-oracle",
+ "capturedAt": "2026-11-11T08:21:51.311Z",
+ "source": "vanilla Minecraft 1.21.11 dedicated server (protocol 774), superflat 4-layer world, offline mode",
+ "protocolVersion": 774,
+ "note": "Captured by .research/vanilla-12111/capture.js on a real vanilla server. decode.js proved the blob consumes whole only with {i16 blockCount, block states, biomes} per section. Do not edit by hand.",
+ "chunk": {
+  "x": 0,
+  "z": 0,
+  "chunkDataBase64": "BAAEBFUKCQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIjMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMwAoAAAAAAAoAAAAAAAoAAAAAAAoAAAAAAAoAAAAAAAoAAAAAAAoAAAAAAAoAAAAAAAoAAAAAAAoAAAAAAAoAAAAAAAoAAAAAAAoAAAAAAAoAAAAAAAoAAAAAAAoAAAAAAAoAAAAAAAoAAAAAAAoAAAAAAAoAAAAAAAoAAAAAAAoAAAAAAAoAAAAAAAo",
+  "chunkDataLength": 2196
+ },
+ "expected": {
+  "sections": 24,
+  "minY": -64,
+  "worldHeight": 384,
+  "blockCountsFirstThree": [
+   1024,
+   0,
+   0
+  ],
+  "blockPalette": [
+   "bedrock",
+   "dirt",
+   "grass_block",
+   "air"
+  ],
+  "biome": "plains",
+  "biomeId": 40,
+  "heightmapTypes": [
+   "world_surface",
+   "motion_blocking_no_leaves",
+   "motion_blocking"
+  ],
+  "heightmapLongs": 37,
+  "heightmapBits": 9,
+  "heightmapValuesPerLong": 7,
+  "worldSurfaceFirstLong": "72198606942111748",
+  "worldSurfaceValue": 4,
+  "skyLightMask": [
+   "6"
+  ],
+  "blockLightMask": [],
+  "emptySkyLightMask": [
+   "1"
+  ],
+  "emptyBlockLightMask": [
+   "7"
+  ],
+  "skyLightArrays": 2,
+  "skyLightArrayBytes": 2048,
+  "blockLightArrays": 0,
+  "blockEntitiesInPacket": 0,
+  "packetOrder": [
+   "login",
+   "position",
+   "player_info",
+   "player_info",
+   "spawn_position",
+   "update_view_position",
+   "chunk_batch_start",
+   "chunk_batch_finished",
+   "chunk_batch_start",
+   "chunk_batch_finished",
+   "player_info",
+   "chunk_batch_start",
+   "chunk_batch_finished",
+   "chunk_batch_start",
+   "chunk_batch_finished",
+   "chunk_batch_start",
+   "chunk_batch_finished",
+   "chunk_batch_start",
+   "chunk_batch_finished",
+   "chunk_batch_start",
+   "chunk_batch_finished",
+   "chunk_batch_start",
+   "chunk_batch_finished",
+   "chunk_batch_start",
+   "chunk_batch_finished",
+   "chunk_batch_start",
+   "chunk_batch_finished",
+   "chunk_batch_start",
+   "chunk_batch_finished",
+   "chunk_batch_start",
+   "chunk_batch_finished",
+   "chunk_batch_start",
+   "chunk_batch_finished",
+   "chunk_batch_start",
+   "chunk_batch_finished",
+   "chunk_batch_start",
+   "chunk_batch_finished"
+  ]
+ },
+ "lightSamples": [
+  {
+   "x": 0,
+   "z": 0,
+   "skyLightMask": [
+    "6"
+   ],
+   "emptySkyLightMask": [
+    "1"
+   ],
+   "emptyBlockLightMask": [
+    "7"
+   ],
+   "skyLightCount": 2,
+   "skyLightLengths": [
+    2048,
+    2048
+   ]
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+/node_modules
+/game
+login.json
+settings.json
+
+# build evidence and workspace state stay local
+/.research
+/.omo
+
+# local tooling
+.codegraph/
+.idea/
+.vscode/
+
+# transient artifacts
+.tmp-*
+*.tmp
+npm-debug.log*
+/*.log
+.env
+.DS_Store
+Thumbs.db

@@ -1,0 +1,98 @@
+{
+  "runtimeExpandedKeyCount": 16164,
+  "literalMemberCount": 960,
+  "nameCount": 8082,
+  "itemRegistryKeys": 1447,
+  "atlasCount": 1219,
+  "digest": {
+    "algorithm": "sha256",
+    "format": "id\\tname\\tdisplayName-or-textureInfo, ascending string sort, newline-joined",
+    "value": "7f8c555ceba33cb4930b93ac4c1e5c2e7249299c9f2ec1756dee38dc1dc8b02d"
+  },
+  "anchors": {
+    "blocks": [
+      {
+        "id": 1,
+        "name": "Unloaded",
+        "textureInfo": "unloaded",
+        "atlasIdx": 188
+      },
+      {
+        "id": 2,
+        "name": "Dirt",
+        "displayName": "item:dirt",
+        "textureInfo": "dirt",
+        "atlasIdx": 189
+      },
+      {
+        "id": 3,
+        "name": "Messy Dirt",
+        "displayName": "item:messyDirt",
+        "textureInfo": "coarse_dirt",
+        "atlasIdx": 190
+      }
+    ],
+    "items": [
+      {
+        "id": 8083,
+        "name": "Wood Pickaxe",
+        "stackable": false,
+        "type": "Tool",
+        "damage": 18
+      },
+      {
+        "id": 8084,
+        "name": "Stone Pickaxe",
+        "stackable": false,
+        "type": "Tool",
+        "damage": 22
+      }
+    ],
+    "atlas": [
+      {
+        "name": "unloaded",
+        "index": 188
+      },
+      {
+        "name": "dirt",
+        "index": 189
+      },
+      {
+        "name": "grass_top",
+        "index": 192
+      },
+      {
+        "name": "sand",
+        "index": 193
+      },
+      {
+        "name": "clay",
+        "index": 194
+      },
+      {
+        "name": "stone",
+        "index": 216
+      }
+    ],
+    "names": [
+      {
+        "name": "Dirt",
+        "id": 2
+      },
+      {
+        "name": "Messy Dirt",
+        "id": 3
+      },
+      {
+        "name": "Wood Pickaxe",
+        "id": 8083
+      }
+    ]
+  },
+  "assetReferences": {
+    "count": 26570,
+    "entriesWithoutReference": 254,
+    "missingAssets": 0,
+    "noHistoricalFallback": true
+  }
+}

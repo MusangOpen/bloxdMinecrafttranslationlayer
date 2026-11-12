@@ -1,0 +1,77 @@
+{
+  "evidenceFile": ".research/evidence/transport-vectors-846.json",
+  "evidenceSha256": "2a9e7779ef5c22fc5da088fa1db76cec6373d2fffe4e7e53e9bc29bbdc2431a1",
+  "version": 846,
+  "formula": "11*VERSION+7",
+  "sendKey": 9313,
+  "expKey": 221,
+  "offsets": {
+    "secondPass": 5,
+    "lengthMultiplier": 3
+  },
+  "roles": {
+    "keepalive": 110,
+    "analyticsPing": 66,
+    "analyticsUpdate": 62
+  },
+  "vectors": [
+    {
+      "name": "primary",
+      "pass": [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90,
+        100
+      ],
+      "packet": "CPacketBreakBlock",
+      "value": [
+        0,
+        1
+      ],
+      "plainLogicalId": 24,
+      "plainPayloadHex": "04000200",
+      "expectedMask": 9454,
+      "expectedWireId": 9462,
+      "expectedWirePayloadHex": "82e3fec1",
+      "offsets": {
+        "secondPass": 5,
+        "lengthMultiplier": 3
+      }
+    },
+    {
+      "name": "secondary",
+      "pass": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "packet": "CPacketBreakBlock",
+      "value": [
+        0,
+        1
+      ],
+      "plainLogicalId": 24,
+      "plainPayloadHex": "04000200",
+      "expectedMask": 9394,
+      "expectedWireId": 9386,
+      "expectedWirePayloadHex": "b3b4bbbe",
+      "offsets": {
+        "secondPass": 5,
+        "lengthMultiplier": 3
+      }
+    }
+  ]
+}

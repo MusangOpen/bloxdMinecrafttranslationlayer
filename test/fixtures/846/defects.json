@@ -1,0 +1,93 @@
+{
+  "version": {
+    "expected": 846,
+    "currentImpl": 840,
+    "reason": "E_VERSION_MISMATCH"
+  },
+  "sendKey": {
+    "expected": 9313,
+    "currentImpl": 9247,
+    "reason": "E_SEND_KEY_MISMATCH"
+  },
+  "entityDamage": {
+    "id": 117,
+    "baseline840FieldCount": 7,
+    "expected846TopFieldCount": 2,
+    "currentDeclaredFieldCount": 8,
+    "baseline840FieldNames": [
+      "ka",
+      "dt",
+      "ia",
+      "Et",
+      "ot",
+      "tt",
+      "Pt"
+    ],
+    "expected846FieldNames": [
+      "UT",
+      "KT"
+    ],
+    "baseline840SchemaSha256": "2b8d0e31fee1b160caa6e99119edc143747897d0a6fa7cd65e33706513898f04",
+    "generated846SchemaSha256": "9b699b700be476c66a23279d871622a05bb8b1c6172361369a98f222f8bfc4a8",
+    "reason": "E_ENTITY_DAMAGE_FIELD_COUNT"
+  },
+  "removeEffect": {
+    "scope": "baseline840Only",
+    "notAn846Id": true,
+    "reason": "E_REMOVE_EFFECT_FIELD_MISMATCH",
+    "baseline840": {
+      "inboundId": 78,
+      "firstField": "pk",
+      "fieldCount": 3,
+      "file": ".research/live/inbound-schemas.json",
+      "sha256": "c8e58fc7ecc9f99175049cd185673672adfc3acbbd3f0b7fe63bd1ca578d4602"
+    },
+    "generated846": {
+      "hasInboundId78": false,
+      "containsLifeformId": false,
+      "manifestSha256": "ec1532d7c2175f6a70998f29afead0eb210290bc10fcad7661bcae5884ce6ff3",
+      "inboundIdsSha256": "adda237b1fc39b0101c27a2aa6b27c7344335f8f05ba557e606bb8b85e794f44"
+    },
+    "product": {
+      "schemaField": "lifeformId",
+      "handlerField": "playerId",
+      "handlerSource": "bloxd/handlers/impl/entity.js"
+    }
+  },
+  "outboundCodecMissing": {
+    "names": [
+      "CPacketGravityDetection:34",
+      "CPacketKillDetection:50"
+    ],
+    "reason": "E_OUTBOUND_CODEC_MISSING"
+  },
+  "observedAgainst": {
+    "productVersion": 840,
+    "productSendKey": 9247,
+    "liveJsSha256": "936d7d144395e4c3f44adafdcbea1548f68d49ab79048c46f451befd6da08a2a"
+  },
+  "expectedRed": {
+    "E_VERSION_MISMATCH": 1,
+    "E_TRANSPORT_VECTOR_MISMATCH": 4,
+    "E_SEND_KEY_MISMATCH": 1,
+    "E_TRANSPORT_EXP_KEY_MISMATCH": 1,
+    "E_INBOUND_ID_MISSING": 49,
+    "E_INBOUND_ID_UNEXPECTED": 21,
+    "E_OUTBOUND_ID_MISSING": 57,
+    "E_OUTBOUND_ID_UNEXPECTED": 24,
+    "E_INBOUND_SCHEMA_SIGNATURE_MISMATCH": 13,
+    "E_OUTBOUND_SCHEMA_SIGNATURE_MISMATCH": 16,
+    "E_REGISTRY_COUNT_MISMATCH": 1,
+    "E_REGISTRY_DIGEST_MISMATCH": 1,
+    "E_REGISTRY_ANCHOR_MISMATCH": 12,
+    "E_REGISTRY_ASSET_REFERENCE_MISMATCH": 4,
+    "E_HANDLER_ID_MISSING": 83,
+    "E_HANDLER_ID_UNEXPECTED": 6,
+    "E_HANDLER_SCHEMA_COVERAGE_MISMATCH": 1,
+    "E_HANDLER_DISPOSITION_MISMATCH": 2,
+    "E_ITEM_COMPONENT_LOSS": 5,
+    "E_ENTITY_DAMAGE_FIELD_COUNT": 2,
+    "E_REMOVE_EFFECT_FIELD_MISMATCH": 1,
+    "E_OUTBOUND_CODEC_MISSING": 2
+  }
+}

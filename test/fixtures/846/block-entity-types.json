@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "source": "Minecraft Java 1.21.11 block_entity_type registry order",
+  "blockEntityTypes": {
+    "dispenser": 7,
+    "sign": 8
+  },
+  "knownOrder": [
+    { "name": "dispenser", "id": 7 },
+    { "name": "sign", "id": 8 }
+  ]
+}

@@ -1,0 +1,428 @@
+{
+  "schemaVersion": 1,
+  "suiteCount": 22,
+  "report": {
+    "evidenceDir": ".omo/evidence/update-bloxd-mc-1-21-11-fabric/required",
+    "writeTask26": true
+  },
+  "evidence": {
+    "logPattern": "<suiteId>.log",
+    "jsonPattern": "<suiteId>.json",
+    "index": "evidence-index.json"
+  },
+  "plan": {
+    "path": ".omo/plans/update-bloxd-mc-1-21-11-fabric.md",
+    "blockedTaskIds": [23]
+  },
+  "externalStatuses": {
+    "liveStatus": {
+      "value": "BLOCKED",
+      "report": "live-bloxd.json",
+      "reason": "Live authenticated Bloxd traffic was not authorized and no pre-existing token was available."
+    },
+    "fabricUiStatus": {
+      "value": "BLOCKED_UNVERIFIED",
+      "report": "fabric-ui.json",
+      "reason": "No real Fabric Loader 1.21.11 client was executed; headless protocol tests cannot prove UI/download/render."
+    }
+  },
+  "pack": {
+    "zip": "bloxd/resource_pack/bloxd-856.zip",
+    "manifest": "bloxd/resource_pack/manifest.json",
+    "expectedSha256Path": "pack.zipSha256",
+    "expectedSizePath": "pack.zipSize",
+    "expectedEntriesPath": "pack.zipEntries"
+  },
+  "excluded": [
+    {
+      "id": "codec",
+      "reason": "Legacy randomized 840 codec schema test superseded by protocol-853; it currently fails and is not part of the required 853 suite. It is intentionally preserved but not counted as green."
+    },
+    {
+      "id": "protocol-846",
+      "reason": "Historical 846 compatibility harness superseded by protocol-853. It is intentionally preserved as evidence but excluded from the required green path."
+    }
+  ],
+  "suites": [
+    {
+      "id": "capture-manifest",
+      "order": 10,
+      "dependsOn": [],
+      "command": ["node", "test/capture-manifest.js", "--check"],
+      "timeoutMs": 120000,
+      "summary": { "source": "stdout", "format": "json", "pick": "last" },
+      "assertions": { "path": "chunks", "min": 1 },
+      "checks": [
+        { "type": "equals", "path": "ok", "value": true },
+        { "type": "equals", "path": "missing", "value": 0 },
+        { "type": "equals", "path": "hashMismatch", "value": 0 }
+      ]
+    },
+    {
+      "id": "extract-846",
+      "order": 20,
+      "dependsOn": ["capture-manifest"],
+      "command": ["node", "test/extract-846.js", "--check"],
+      "timeoutMs": 180000,
+      "summary": { "source": "stdout", "format": "json", "pick": "last" },
+      "assertions": { "path": "checkedFiles", "mode": "length", "min": 1 },
+      "checks": [
+        { "type": "equals", "path": "ok", "value": true },
+        { "type": "equals", "path": "version", "value": 846 },
+        { "type": "equals", "path": "ambiguousRoles", "value": 0 },
+        { "type": "equals", "path": "missingAssets", "value": 0 },
+        { "type": "equals", "path": "sandboxConstructorEscapes", "value": 0 }
+      ]
+    },
+    {
+      "id": "harness-self-test",
+      "order": 30,
+      "dependsOn": [],
+      "command": ["node", "test/harness-self-test.js"],
+      "timeoutMs": 120000,
+      "summary": { "source": "stdout", "format": "keyvalue" },
+      "assertions": { "path": "checks", "min": 1 },
+      "checks": [
+        { "type": "equals", "path": "missingPacket", "value": "nonzero" },
+        { "type": "equals", "path": "skip", "value": "nonzero" },
+        { "type": "equals", "path": "writeError", "value": "nonzero" },
+        { "type": "equals", "path": "zeroAssertions", "value": "nonzero" }
+      ]
+    },
+    {
+      "id": "required-suite-self-test",
+      "order": 40,
+      "dependsOn": ["harness-self-test"],
+      "command": ["node", "test/required-suite.js", "--self-test"],
+      "timeoutMs": 180000,
+      "summary": { "source": "stdout", "format": "keyvalue" },
+      "assertions": { "path": "checks", "min": 1 },
+      "checks": [
+        { "type": "equals", "path": "childExit", "value": "nonzero" },
+        { "type": "equals", "path": "skipMarker", "value": "nonzero" },
+        { "type": "equals", "path": "deletedEvidence", "value": "nonzero" },
+        { "type": "equals", "path": "staleHash", "value": "nonzero" }
+      ]
+    },
+    {
+      "id": "version-pins",
+      "order": 50,
+      "dependsOn": [],
+      "command": ["node", "test/version-pins.js", "--final"],
+      "timeoutMs": 120000,
+      "summary": { "source": "stdout", "format": "json", "pick": "last" },
+      "assertions": { "path": "dependencyCount", "min": 1 },
+      "checks": [
+        { "type": "equals", "path": "ok", "value": true },
+        { "type": "equals", "path": "mode", "value": "final" },
+        { "type": "equals", "path": "nodeMajorAtLeast22", "value": true },
+        { "type": "equals", "path": "allFourExact", "value": true },
+        { "type": "equals", "path": "lockfileExact", "value": true },
+        { "type": "equals", "path": "newDependencies", "value": 0 },
+        { "type": "equals", "path": "npmLsProblems", "value": 0 }
+      ]
+    },
+    {
+      "id": "docs-audit",
+      "order": 60,
+      "dependsOn": [],
+      "command": ["node", "test/docs-audit.js"],
+      "timeoutMs": 120000,
+      "summary": { "source": "stdout", "format": "json", "pick": "last" },
+      "assertions": { "path": "commandCount", "min": 1 },
+      "checks": [
+        { "type": "equals", "path": "ok", "value": true },
+        { "type": "equals", "path": "target856", "value": 1 },
+        { "type": "equals", "path": "node22", "value": 1 },
+        { "type": "equals", "path": "exactPins", "value": 1 },
+        { "type": "equals", "path": "packScope", "value": "item-only" },
+        { "type": "equals", "path": "liveStatus", "value": "BLOCKED" },
+        { "type": "equals", "path": "fabricUiStatus", "value": "BLOCKED_UNVERIFIED" },
+        { "type": "equals", "path": "task23Status", "value": "complete" },
+        { "type": "equals", "path": "falseClaims", "value": 0 },
+        { "type": "equals", "path": "commandsValid", "value": 1 }
+      ]
+    },
+    {
+      "id": "protocol-856",
+      "order": 70,
+      "dependsOn": [],
+      "command": ["node", "test/protocol-856.js"],
+      "timeoutMs": 180000,
+      "summary": { "source": "stdout", "format": "keyvalue" },
+      "assertions": { "path": "checks", "min": 15 },
+      "checks": [
+        { "type": "equals", "path": "fail", "value": 0 }
+      ]
+    },
+    {
+      "id": "transport",
+      "order": 80,
+      "dependsOn": ["extract-846"],
+      "command": ["node", "test/transport.js"],
+      "timeoutMs": 120000,
+      "summary": { "source": "stdout", "format": "keyvalue" },
+      "assertions": { "path": "pass", "min": 1 },
+      "checks": [
+        { "type": "equals", "path": "fail", "value": 0 },
+        { "type": "equals", "path": "sendKey", "value": 9423 },
+        { "type": "equals", "path": "joinVersion", "value": 856 }
+      ]
+    },
+    {
+      "id": "e2e-mc",
+      "order": 90,
+      "dependsOn": ["protocol-856"],
+      "command": ["node", "test/e2e-mc.js"],
+      "timeoutMs": 120000,
+      "summary": { "source": "stdout", "format": "harness-result" },
+      "assertions": { "path": "assertions", "min": 1 },
+      "checks": [
+        { "type": "equals", "path": "ok", "value": true },
+        { "type": "length", "path": "failures", "value": 0 },
+        { "type": "length", "path": "skips", "value": 0 },
+        { "type": "length", "path": "timeouts", "value": 0 }
+      ]
+    },
+    {
+      "id": "e2e-packets",
+      "order": 100,
+      "dependsOn": ["protocol-856"],
+      "command": ["node", "test/e2e-packets.js"],
+      "timeoutMs": 180000,
+      "summary": { "source": "stdout", "format": "harness-result" },
+      "assertions": { "path": "assertions", "min": 1 },
+      "checks": [
+        { "type": "equals", "path": "ok", "value": true },
+        { "type": "length", "path": "failures", "value": 0 },
+        { "type": "length", "path": "skips", "value": 0 },
+        { "type": "length", "path": "timeouts", "value": 0 }
+      ]
+    },
+    {
+      "id": "handlers-smoke",
+      "order": 110,
+      "dependsOn": ["protocol-856"],
+      "command": ["node", "test/handlers-smoke.js"],
+      "timeoutMs": 120000,
+      "summary": { "source": "stdout", "format": "harness-result" },
+      "assertions": { "path": "assertions", "min": 1 },
+      "checks": [
+        { "type": "equals", "path": "ok", "value": true },
+        { "type": "length", "path": "failures", "value": 0 },
+        { "type": "length", "path": "skips", "value": 0 },
+        { "type": "length", "path": "timeouts", "value": 0 }
+      ]
+    },
+    {
+      "id": "mc-adapter-item-components",
+      "order": 120,
+      "dependsOn": ["handlers-smoke"],
+      "command": ["node", "test/mc-adapter.js", "--only", "item-components"],
+      "timeoutMs": 120000,
+      "summary": { "source": "stdout", "format": "json", "pick": "last" },
+      "assertions": { "path": "flags", "mode": "objectKeys", "min": 1 },
+      "checks": [
+        { "type": "equals", "path": "ok", "value": true },
+        { "type": "length", "path": "failures", "value": 0 },
+        { "type": "equals", "path": "flags.addedCountMatches", "value": 1 },
+        { "type": "equals", "path": "flags.customNameNbt", "value": 1 },
+        { "type": "equals", "path": "flags.loreNbt", "value": 1 },
+        { "type": "equals", "path": "flags.itemModelString", "value": 1 },
+        { "type": "equals", "path": "flags.unchangedItemIds", "value": 1 },
+        { "type": "equals", "path": "flags.droppedItemVisual", "value": 1 }
+      ]
+    },
+    {
+      "id": "mc-adapter-inbound",
+      "order": 130,
+      "dependsOn": ["mc-adapter-item-components"],
+      "command": ["node", "test/mc-adapter.js", "--only", "inbound"],
+      "timeoutMs": 120000,
+      "summary": { "source": "stdout", "format": "json", "pick": "last" },
+      "assertions": { "path": "flags", "mode": "objectKeys", "min": 1 },
+      "checks": [
+        { "type": "equals", "path": "ok", "value": true },
+        { "type": "length", "path": "failures", "value": 0 },
+        { "type": "equals", "path": "flags.slotId", "value": 5 },
+        { "type": "equals", "path": "flags.chatMessageForwarded", "value": 1 },
+        { "type": "equals", "path": "flags.useItemAsBlockPlace", "value": 1 },
+        { "type": "equals", "path": "flags.fabricatedPosition", "value": 0 }
+      ]
+    },
+    {
+      "id": "mc-adapter-components",
+      "order": 140,
+      "dependsOn": ["mc-adapter-inbound"],
+      "command": ["node", "test/mc-adapter.js", "--only", "components"],
+      "timeoutMs": 120000,
+      "summary": { "source": "stdout", "format": "json", "pick": "last" },
+      "assertions": { "path": "flags", "mode": "objectKeys", "min": 1 },
+      "checks": [
+        { "type": "equals", "path": "ok", "value": true },
+        { "type": "length", "path": "failures", "value": 0 },
+        { "type": "equals", "path": "flags.exactBase", "value": 1 },
+        { "type": "equals", "path": "flags.exactTranslate", "value": 1 },
+        { "type": "equals", "path": "flags.exactDepth", "value": 1 },
+        { "type": "equals", "path": "flags.cycleGuarded", "value": 1 },
+        { "type": "equals", "path": "flags.lossyTextOnly", "value": 0 },
+        { "type": "equals", "path": "flags.rawJsonText", "value": 0 }
+      ]
+    },
+    {
+      "id": "mc-adapter-titles",
+      "order": 150,
+      "dependsOn": ["mc-adapter-components"],
+      "command": ["node", "test/mc-adapter.js", "--only", "titles"],
+      "timeoutMs": 120000,
+      "summary": { "source": "stdout", "format": "json", "pick": "last" },
+      "assertions": { "path": "flags", "mode": "objectKeys", "min": 1 },
+      "checks": [
+        { "type": "equals", "path": "ok", "value": true },
+        { "type": "length", "path": "failures", "value": 0 },
+        { "type": "equals", "path": "flags.titleText", "value": 1 },
+        { "type": "equals", "path": "flags.subtitleText", "value": 1 },
+        { "type": "equals", "path": "flags.timesExact", "value": 1 },
+        { "type": "equals", "path": "flags.clearReset", "value": 1 },
+        { "type": "equals", "path": "flags.distinctTitleSubtitlePackets", "value": 1 }
+      ]
+    },
+    {
+      "id": "mc-adapter-registry-map",
+      "order": 160,
+      "dependsOn": ["mc-adapter-titles"],
+      "command": ["node", "test/mc-adapter.js", "--only", "registry-map"],
+      "timeoutMs": 120000,
+      "summary": { "source": "stdout", "format": "json", "pick": "last" },
+      "assertions": { "path": "flags", "mode": "objectKeys", "min": 1 },
+      "checks": [
+        { "type": "equals", "path": "ok", "value": true },
+        { "type": "length", "path": "failures", "value": 0 },
+        { "type": "equals", "path": "flags.unresolvedExisting", "value": 0 },
+        { "type": "equals", "path": "flags.silentStoneFallback", "value": 0 },
+        { "type": "equals", "path": "flags.silentArmorStandFallback", "value": 0 },
+        { "type": "equals", "path": "flags.newRegistryIds", "value": 0 }
+      ]
+    },
+    {
+      "id": "mc-adapter-item-visuals",
+      "order": 170,
+      "dependsOn": ["mc-adapter-registry-map"],
+      "command": ["node", "test/mc-adapter.js", "--only", "item-visuals"],
+      "timeoutMs": 120000,
+      "summary": { "source": "stdout", "format": "json", "pick": "last" },
+      "assertions": { "path": "flags", "mode": "objectKeys", "min": 1 },
+      "checks": [
+        { "type": "equals", "path": "ok", "value": true },
+        { "type": "length", "path": "failures", "value": 0 },
+        { "type": "min", "path": "flags.inventoryModels", "value": 1 },
+        { "type": "min", "path": "flags.equipmentModels", "value": 1 },
+        { "type": "min", "path": "flags.droppedItemModels", "value": 1 },
+        { "type": "equals", "path": "flags.missingModels", "value": 0 },
+        { "type": "equals", "path": "flags.duplicateModelIds", "value": 0 },
+        { "type": "equals", "path": "flags.newItemIds", "value": 0 },
+        { "type": "equals", "path": "flags.exactNameNbt", "value": 1 }
+      ]
+    },
+    {
+      "id": "mc-adapter-vocabulary",
+      "order": 180,
+      "dependsOn": ["mc-adapter-item-visuals"],
+      "command": ["node", "test/mc-adapter.js", "--only", "vocabulary"],
+      "timeoutMs": 180000,
+      "summary": { "source": "stdout", "format": "json", "pick": "last" },
+      "assertions": { "path": "flags", "mode": "objectKeys", "min": 1 },
+      "checks": [
+        { "type": "equals", "path": "ok", "value": true },
+        { "type": "length", "path": "failures", "value": 0 },
+        { "type": "min", "path": "flags.handlerWrites", "value": 1 },
+        { "type": "equalsPath", "path": "flags.mapped", "other": "flags.handlerWrites" },
+        { "type": "equals", "path": "flags.unhandled", "value": 0 },
+        { "type": "equals", "path": "flags.swallowedWriteErrors", "value": 0 },
+        { "type": "equals", "path": "flags.noopsAllLedgerListed", "value": 1 }
+      ]
+    },
+    {
+      "id": "resource-pack",
+      "order": 190,
+      "dependsOn": ["mc-adapter-vocabulary"],
+      "command": ["node", "test/resource-pack.js", "--all"],
+      "timeoutMs": 300000,
+      "summary": { "source": "stdout", "format": "json", "pick": "last" },
+      "assertions": { "path": "failureCases", "mode": "length", "min": 1 },
+      "checks": [
+        { "type": "equals", "path": "ok", "value": true },
+        { "type": "equals", "path": "skipped", "value": 0 },
+        { "type": "equals", "path": "malformedZip", "value": "rejected" },
+        { "type": "equals", "path": "badHash", "value": "rejected" },
+        { "type": "equals", "path": "missingModel", "value": "rejected" },
+        { "type": "equals", "path": "staleIdentity", "value": "rejected" },
+        { "type": "equals", "path": "noRealClientClaim", "value": 1 },
+        { "type": "min", "path": "hostZipEntries", "value": 1 },
+        { "type": "equalsPackSha256", "path": "zipSha256" }
+      ]
+    },
+    {
+      "id": "resource-pack-protocol",
+      "order": 200,
+      "dependsOn": ["resource-pack"],
+      "command": ["node", "test/resource-pack-protocol.js"],
+      "timeoutMs": 180000,
+      "summary": { "source": "stdout", "format": "json", "pick": "last" },
+      "assertions": { "path": "statusCases", "mode": "length", "min": 1 },
+      "checks": [
+        { "type": "equals", "path": "ok", "value": true },
+        { "type": "equals", "path": "skipped", "value": 0 },
+        { "type": "equals", "path": "worldPacketsBeforeSuccess", "value": 0 },
+        { "type": "equals", "path": "bloxdConnectBeforeSuccess", "value": 0 },
+        { "type": "equals", "path": "cleanupOnFailure", "value": 1 },
+        { "type": "equals", "path": "allStatusesCovered", "value": 8 },
+        { "type": "equals", "path": "noRealClientClaim", "value": 1 }
+      ]
+    },
+    {
+      "id": "integration-1.21.11",
+      "order": 210,
+      "dependsOn": ["resource-pack-protocol"],
+      "command": ["node", "test/integration-1.21.11.js", "--all"],
+      "timeoutMs": 300000,
+      "summary": { "source": "file", "path": "task-23.json", "format": "json" },
+      "assertions": { "path": "runs", "mode": "length", "min": 1 },
+      "checks": [
+        { "type": "equals", "path": "ok", "value": true },
+        { "type": "length", "path": "problems", "value": 0 },
+        { "type": "length", "path": "runs", "value": 7 },
+        { "type": "equals", "path": "runs.0.exitCode", "value": 0 },
+        { "type": "equals", "path": "runs.0.summary.ok", "value": true },
+        { "type": "min", "path": "runs.0.summary.assertions", "value": 1 },
+        { "type": "length", "path": "runs.0.summary.failures", "value": 0 },
+        { "type": "equals", "path": "runs.0.summary.worldPacketsBeforeLoad", "value": 0 },
+        { "type": "equals", "path": "runs.0.summary.itemPacketsBeforeLoad", "value": 0 },
+        { "type": "equals", "path": "runs.0.summary.clientErrors", "value": 0 },
+        { "type": "equals", "path": "runs.0.summary.serverErrors", "value": 0 },
+        { "type": "equals", "path": "runs.0.summary.timeout", "value": 0 }
+      ]
+    },
+    {
+      "id": "final-audit",
+      "order": 220,
+      "dependsOn": ["integration-1.21.11"],
+      "command": ["node", "test/final-audit.js"],
+      "timeoutMs": 240000,
+      "summary": { "source": "stdout", "format": "json", "pick": "last" },
+      "assertions": { "path": "historical.checkedEntries", "min": 1 },
+      "checks": [
+        { "type": "equals", "path": "ok", "value": true },
+        { "type": "equals", "path": "flags.historicalUnchanged", "value": 1 },
+        { "type": "equals", "path": "flags.gitDirectory", "value": 0 },
+        { "type": "equals", "path": "flags.forbiddenFabricFiles", "value": 0 },
+        { "type": "equals", "path": "flags.newDependencies", "value": 0 },
+        { "type": "equals", "path": "flags.newRegistryIds", "value": 0 },
+        { "type": "equals", "path": "flags.minecraftNamespaceOverrides", "value": 0 },
+        { "type": "equals", "path": "flags.unintendedPlacedBlockBehavior", "value": 0 },
+        { "type": "equals", "path": "flags.packSha256Matches", "value": 1 },
+        { "type": "equals", "path": "flags.scopeFilesOnly", "value": 1 }
+      ]
+    }
+  ]
+}

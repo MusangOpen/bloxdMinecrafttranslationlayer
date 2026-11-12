@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "suiteCount": 1,
+  "report": {
+    "evidenceDir": ".omo/evidence/update-bloxd-mc-1-21-11-fabric/required/selftest/skip-marker",
+    "writeTask26": false
+  },
+  "pack": {
+    "zip": "bloxd/resource_pack/bloxd-846.zip",
+    "manifest": "bloxd/resource_pack/manifest.json",
+    "expectedSha256Path": "pack.zipSha256",
+    "expectedSizePath": "pack.zipSize",
+    "expectedEntriesPath": "pack.zipEntries"
+  },
+  "externalStatuses": {
+    "liveStatus": { "value": "BLOCKED", "report": "live-bloxd.json" },
+    "fabricUiStatus": { "value": "BLOCKED_UNVERIFIED", "report": "fabric-ui.json" }
+  },
+  "suites": [
+    {
+      "id": "skip-marker",
+      "order": 10,
+      "dependsOn": [],
+      "command": [
+        "node",
+        "-e",
+        "console.log('SKIP required-check');process.stdout.write(JSON.stringify({ok:true,assertions:1,failures:[]}))"
+      ],
+      "timeoutMs": 30000,
+      "summary": { "source": "stdout", "format": "json", "pick": "last" },
+      "assertions": { "path": "assertions", "min": 1 },
+      "checks": [
+        { "type": "equals", "path": "ok", "value": true },
+        { "type": "length", "path": "failures", "value": 0 }
+      ]
+    }
+  ]
+}

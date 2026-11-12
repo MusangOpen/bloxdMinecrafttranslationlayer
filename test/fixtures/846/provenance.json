@@ -1,0 +1,117 @@
+{
+  "build": "tcwczu",
+  "buildVersion": "357faec1",
+  "protocolVersion": 846,
+  "generatedManifestSha256": "ec1532d7c2175f6a70998f29afead0eb210290bc10fcad7661bcae5884ce6ff3",
+  "sourceMainSha256": "091a081eaee556d65c1c248a56b32a5b2c91626ba831f615cdd549983f2aa4b9",
+  "derivedFrom": "generated-evidence",
+  "frozenAtUtc": "2026-11-02T00:00:00Z",
+  "transportEvidence": {
+    "path": ".research/evidence/transport-vectors-846.json",
+    "sha256": "2a9e7779ef5c22fc5da088fa1db76cec6373d2fffe4e7e53e9bc29bbdc2431a1",
+    "derivationScript": ".research/derive-transport-vectors-846.cjs",
+    "derivationScriptSha256": "bd1a807b98efcbd264028f908a2e8d60a5712b17963df0efbba09181c0457753"
+  },
+  "fixtureHelper": {
+    "path": ".research/derive-protocol-846-fixtures.cjs",
+    "sha256": "1512ea5ed317d7c178a36011a1129bba6f67394d2ef4081dcd799fe3e066cd5a"
+  },
+  "sources": [
+    {
+      "kind": "generated",
+      "name": ".research/builds/tcwczu-357faec1/generated/manifest.json",
+      "bytes": 5543,
+      "sha256": "ec1532d7c2175f6a70998f29afead0eb210290bc10fcad7661bcae5884ce6ff3"
+    },
+    {
+      "kind": "generated",
+      "name": ".research/builds/tcwczu-357faec1/generated/inbound-ids.json",
+      "bytes": 2615,
+      "sha256": "adda237b1fc39b0101c27a2aa6b27c7344335f8f05ba557e606bb8b85e794f44"
+    },
+    {
+      "kind": "generated",
+      "name": ".research/builds/tcwczu-357faec1/generated/inbound-schemas.json",
+      "bytes": 95579,
+      "sha256": "9da7ff61542613705bd1580c4f30838d72a242d7b09127e31b6ff38ddc1e2420"
+    },
+    {
+      "kind": "generated",
+      "name": ".research/builds/tcwczu-357faec1/generated/inbound-semantics.json",
+      "bytes": 72727,
+      "sha256": "b672aa60d38c0274afa66323c4fc76302e17da5e925e60fc6321cddcf0e7f69e"
+    },
+    {
+      "kind": "generated",
+      "name": ".research/builds/tcwczu-357faec1/generated/outbound-call-sites.json",
+      "bytes": 29077,
+      "sha256": "1dfddefea136be612d112b71fd35af582e12ef35d16aa0eaed755b9db56e1c86"
+    },
+    {
+      "kind": "generated",
+      "name": ".research/builds/tcwczu-357faec1/generated/outbound-ids.json",
+      "bytes": 2364,
+      "sha256": "faa5a263a9c16564ec9323460ace6faec989b43c9b02a3c8d94190a985df3f44"
+    },
+    {
+      "kind": "generated",
+      "name": ".research/builds/tcwczu-357faec1/generated/outbound-schemas.json",
+      "bytes": 39045,
+      "sha256": "9a97e4a8b3a3c6afd205ca853abc7b735739922f7c06ec9c133a2a75200cd2df"
+    },
+    {
+      "kind": "generated",
+      "name": ".research/builds/tcwczu-357faec1/generated/registry.json",
+      "bytes": 4104400,
+      "sha256": "130d568348fb64cb79912b458b3762b02e8cc6dc1b0c861e7ccd2eeacf96a96a"
+    },
+    {
+      "kind": "generated",
+      "name": ".research/builds/tcwczu-357faec1/generated/transport.json",
+      "bytes": 996,
+      "sha256": "c4628bf18a2ceef0e448de0dc308ca2f35e5bcdde69a359bd00836c42094c071"
+    },
+    {
+      "kind": "generated",
+      "name": ".research/builds/tcwczu-357faec1/generated/assets.json",
+      "bytes": 9839676,
+      "sha256": "79d87c1a5f5a6913e7e96f5cce12d72745bb332d3cae65d509f6fa54ad7afa16"
+    },
+    {
+      "kind": "evidence",
+      "name": ".research/live/inbound-schemas.json",
+      "bytes": 59612,
+      "sha256": "c8e58fc7ecc9f99175049cd185673672adfc3acbbd3f0b7fe63bd1ca578d4602"
+    },
+    {
+      "kind": "evidence",
+      "name": ".research/builds/tcwczu-357faec1/main.js",
+      "bytes": 3276363,
+      "sha256": "091a081eaee556d65c1c248a56b32a5b2c91626ba831f615cdd549983f2aa4b9"
+    },
+    {
+      "kind": "evidence",
+      "name": ".research/evidence/transport-vectors-846.json",
+      "bytes": 2512,
+      "sha256": "2a9e7779ef5c22fc5da088fa1db76cec6373d2fffe4e7e53e9bc29bbdc2431a1"
+    },
+    {
+      "kind": "evidence",
+      "name": ".research/derive-transport-vectors-846.cjs",
+      "bytes": 8343,
+      "sha256": "bd1a807b98efcbd264028f908a2e8d60a5712b17963df0efbba09181c0457753"
+    },
+    {
+      "kind": "evidence",
+      "name": ".research/derive-protocol-846-fixtures.cjs",
+      "bytes": 13843,
+      "sha256": "1512ea5ed317d7c178a36011a1129bba6f67394d2ef4081dcd799fe3e066cd5a"
+    },
+    {
+      "kind": "observed-red-counts",
+      "name": ".research/evidence/expected-red-counts-846.json",
+      "bytes": 782,
+      "sha256": "fd1ed02d0b4a698dfb7958a7fffc0057e6f704ac8e47678595d67ada363090d0"
+    }
+  ]
+}

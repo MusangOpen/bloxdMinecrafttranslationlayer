@@ -1,0 +1,41 @@
+{
+  "blockAnchor": {
+    "id": 2,
+    "name": "Dirt",
+    "displayName": "item:dirt",
+    "textureInfo": "dirt",
+    "atlasIdx": 189
+  },
+  "itemAnchor": {
+    "id": 8083,
+    "name": "Wood Pickaxe",
+    "stackable": false,
+    "type": "Tool",
+    "damage": 18
+  },
+  "atlasAnchor": {
+    "name": "dirt",
+    "index": 189
+  },
+  "componentExpectations": {
+    "sourceName": "Dirt",
+    "displayName": "item:dirt",
+    "textureInfo": "dirt",
+    "atlasIdx": 189,
+    "requiredComponentTypes": [
+      "unbreakable",
+      "custom_name"
+    ],
+    "forbiddenComponentTypes": [
+      "item_model"
+    ],
+    "requiredCounters": [
+      "addedComponentCount",
+      "removedComponentCount"
+    ],
+    "counterValues": {
+      "addedComponentCount": 2,
+      "removedComponentCount": 0
+    }
+  }
+}
