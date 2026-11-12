@@ -12,7 +12,7 @@
     "test:required:selftest": "node test/required-suite.js --self-test"
   },
   "author": "7GrandDad",
-  "license": "AGPL-3.0-or-later",
+  "license": "Apache-2.0",
   "engines": {
     "node": ">=22"
   },

@@ -206,4 +206,5 @@ does not clear live Bloxd or Fabric UI verification.
 
 ## Credits and license
 
-Original project by 7GrandDad. Rewritten for Minecraft 1.21.11 and Bloxd 856. See `LICENSE.md`.
+Licensed under the Apache License 2.0; see `LICENSE.md`. Original project by 7GrandDad.
+Rewritten for Minecraft 1.21.11 and Bloxd 856.

@@ -123,6 +123,7 @@ const INTENTIONAL_PRODUCT_CHANGES = [
   { path: 'package.json', reason: 'pin Node >=22, exact dependency versions and required-suite scripts' },
   { path: 'package-lock.json', reason: 'lockfile root ranges/resolved versions aligned with package.json pins' },
   { path: 'README.md', reason: 'document 856 baseline, Node 22+, pack scope, commands and honest limits' },
+  { path: 'LICENSE.md', reason: 'relicensed from AGPL-3.0 to Apache-2.0 at the repository owner request' },
   { path: 'settings.json', reason: 'local gitignored runtime settings written by the startup path' },
   { path: 'index.js', reason: 'resource-pack preflight, login/pack gate, startup and clean shutdown' },
   { path: 'reference/physics/Movement.java', reason: 'speed/jump/gravity constants replaced with values measured from the 2026-11-11 Bloxd sample' },
